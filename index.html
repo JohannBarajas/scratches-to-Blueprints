@@ -483,6 +483,32 @@
     gap: 40px;
     align-items: start;
   }
+  .rebar-loading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 38px auto 0;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: rgba(35,35,35,0.5);
+  }
+  .rebar-loading .spinner{
+    width: 15px;
+    height: 15px;
+    border: 2px solid rgba(35,35,35,0.18);
+    border-top-color: var(--redline);
+    border-radius: 50%;
+    animation: rebar-spin 0.8s linear infinite;
+  }
+  @keyframes rebar-spin{
+    to{ transform: rotate(360deg); }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .rebar-loading .spinner{ animation: none; }
+  }
   .rebar-eyebrow{
     font-family:'IBM Plex Mono', monospace;
     font-size: 0.7rem;
@@ -726,6 +752,10 @@
       </div>
       <p class="rebar-cap">Mismo detalle, anotado a mano — SI y pies-pulgadas</p>
     </div>
+  </div>
+  <div class="rebar-loading">
+    <span class="spinner" aria-hidden="true"></span>
+    Cargando más ejemplos…
   </div>
 </section>
 
