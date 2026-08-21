@@ -466,12 +466,22 @@
     margin-top: 70px;
   }
   .rebar-inner{
-    max-width: 1040px;
+    max-width: 640px;
     margin: 0 auto;
+    text-align: center;
+  }
+  .rebar-inner .rebar-specs{
+    text-align: left;
+    max-width: 460px;
+    margin: 0 auto;
+  }
+  .rebar-figs{
+    max-width: 1080px;
+    margin: 44px auto 0;
     display: grid;
-    grid-template-columns: 1.05fr 0.95fr;
-    gap: 48px;
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
   }
   .rebar-eyebrow{
     font-family:'IBM Plex Mono', monospace;
@@ -515,7 +525,6 @@
     padding: 16px;
     box-shadow: 0 22px 46px rgba(0,0,0,0.22);
   }
-  .rebar-fig + .rebar-cap + .rebar-fig{ margin-top: 34px; }
   .rebar-fig img{ width: 100%; height: auto; display: block; }
   .rebar-cap{
     font-family:'IBM Plex Mono', monospace;
@@ -534,9 +543,8 @@
     margin-top: 18px;
     margin-bottom: 0;
   }
-  @media (max-width: 800px){
-    .rebar-inner{ grid-template-columns: 1fr; gap: 34px; }
-    .rebar-fig{ order: -1; }
+  @media (max-width: 700px){
+    .rebar-figs{ grid-template-columns: 1fr; gap: 34px; }
   }
 
   /* ===== SLIDER AUTOMATICO POR SCROLL ===== */
@@ -693,24 +701,26 @@
 
 <section class="rebar" id="rebar3d">
   <div class="rebar-inner">
-    <div>
-      <div class="rebar-eyebrow">DETALLE ESTRUCTURAL · REVIT 3D</div>
-      <h2>Despiece de acero<br>en <em>3 dimensiones</em></h2>
-      <p>El armado modelado en 3D antes de que llegue a obra. El fierrero ve exactamente cómo va cada varilla — parrilla, flejes, arranque de columna — sin tener que interpretar cortes en 2D. Menos preguntas en campo, menos acero mal cortado.</p>
-      <ul class="rebar-specs">
-        <li>Zapata <span>1.50 × 1.50 × 0.35 m</span></li>
-        <li>Parrilla zapata <span>#5 @ 20 cm</span></li>
-        <li>Columna <span>0.35 × 0.40 m</span></li>
-        <li>Refuerzo longitudinal <span>#5 @ 19 cm</span></li>
-        <li>Flejes <span>#3 @ 15 cm</span></li>
-      </ul>
-      <p class="rebar-note">Ejemplo en unidades SI / NSR-10. El mismo detalle se entrega en pies-pulgadas bajo ACI 318 según lo requiera el proyecto.</p>
-    </div>
+    <div class="rebar-eyebrow">DETALLE ESTRUCTURAL · REVIT 3D</div>
+    <h2>Despiece de acero<br>en <em>3 dimensiones</em></h2>
+    <p>El armado modelado en 3D antes de que llegue a obra. El fierrero ve exactamente cómo va cada varilla — parrilla, flejes, arranque de columna — sin tener que interpretar cortes en 2D. Menos preguntas en campo, menos acero mal cortado.</p>
+    <ul class="rebar-specs">
+      <li>Zapata <span>1.50 × 1.50 × 0.35 m</span></li>
+      <li>Parrilla zapata <span>#5 @ 20 cm</span></li>
+      <li>Columna <span>0.35 × 0.40 m</span></li>
+      <li>Refuerzo longitudinal <span>#5 @ 19 cm</span></li>
+      <li>Flejes <span>#3 @ 15 cm</span></li>
+    </ul>
+    <p class="rebar-note">Ejemplo en unidades SI / NSR-10. El mismo detalle se entrega en pies-pulgadas bajo ACI 318 según lo requiera el proyecto.</p>
+  </div>
+  <div class="rebar-figs">
     <div>
       <div class="rebar-fig">
         <img src="assets/img-03-54095947fc.jpg" width="857" height="658" loading="lazy" decoding="async" alt="Detalle 3D de zapata aislada con parrilla de refuerzo, arranque de columna, flejes y cotas">
       </div>
       <p class="rebar-cap">Zapata aislada — modelo de refuerzo 3D</p>
+    </div>
+    <div>
       <div class="rebar-fig">
         <img src="assets/img-08-c1e8d9b4ca.jpg" width="1400" height="1073" loading="lazy" decoding="async" alt="Zapata 3D con cotas y despiece de acero anotados a mano en español e inglés — parrilla, flejes, refuerzo longitudinal y footing">
       </div>
